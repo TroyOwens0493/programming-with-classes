@@ -16,7 +16,7 @@ public class Entry
 
     public string GetPrompt()
     {
-        _prompt = PromptGenerator.SelectRand();
+        _prompt = Prompt.SelectRand();
         return _prompt;
     }
 
