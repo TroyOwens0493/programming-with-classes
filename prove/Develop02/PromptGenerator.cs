@@ -5,14 +5,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<string> items = new
-        { "potatos", "place holders go here"
-
-        };
+        List<string> items = new List<string>
+        {"potatos", "place holders go here"};
         Random random = new Random();
         int PromptIndex = random.Next(items.Count);
         string RandomPrompt = items[PromptIndex];
-        Console.WriteLine($"your prompt:"+RandomPrompt )
+        Console.WriteLine($"your prompt:"+RandomPrompt);
     }
 }
 
