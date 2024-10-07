@@ -1,9 +1,27 @@
-using System;
-
-class Program
+public class Entry
 {
-    static void Main(string[] args)
+    // attributes
+    public DateTime _timestamp;
+
+    public string _prompt;
+
+    public string _body;
+
+    // behaviors
+    public DateTime GetDateTime()
     {
-        Console.WriteLine("Hello Develop02 World!");
+        return DateTime.Now;
     }
+
+    public string GetPrompt()
+    {
+        ;
+    }
+
+    public string GetResponse()
+    {
+        return Console.ReadLine();
+    }
+
+    public void Display()
 }

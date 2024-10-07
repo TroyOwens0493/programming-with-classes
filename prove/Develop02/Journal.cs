@@ -2,10 +2,15 @@ using System;
 
 public class Journal
 {
-    List<Entry> _entries = new List<Entry>;
-    public Entry AddEntry()
+    List<Entry> _entries = new List<Entry>();
+    public void AddEntry()
     {
+        Entry newEntry = new Entry();
+        newEntry._timestamp = newEntry.GetDateTime();
+        newEntry._prompt = newEntry.GetPrompt();
+        newEntry._body = newEntry.GetResponse();
 
+        _entries.Add(newEntry);
     }
     public void DisplayEntries()
     {
