@@ -1,10 +1,16 @@
 using System;
+using System.Xml.Serialization;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
+        List<string> items = new List<string>
+        {"potatos", "place holders go here"};
+        Random random = new Random();
+        int PromptIndex = random.Next(items.Count);
+        string RandomPrompt = items[PromptIndex];
+        Console.WriteLine($"your prompt:"+RandomPrompt);
     }
 }
 
