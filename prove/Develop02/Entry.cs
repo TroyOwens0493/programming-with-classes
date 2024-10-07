@@ -10,18 +10,24 @@ public class Entry
     // behaviors
     public DateTime GetDateTime()
     {
-        return DateTime.Now;
+        _timestamp = DateTime.Now;
+        return _timestamp;
     }
 
     public string GetPrompt()
     {
-        ;
+        _prompt = PromptGenerator.SelectRand();
+        return _prompt;
     }
 
     public string GetResponse()
     {
-        return Console.ReadLine();
+        _body = Console.ReadLine();
+        return _body;
     }
 
     public void Display()
+    {
+        Console.WriteLine($"Date - {_timestamp} - Prompt: {_prompt}\n {_body}");
+    }
 }
