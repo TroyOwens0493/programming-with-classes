@@ -1,10 +1,24 @@
 using System;
 
-class Program
+public class Journal
 {
-    static void Main(string[] args)
+    List<Entry> _entries = new List<Entry>;
+    public Entry AddEntry()
     {
-        Console.WriteLine("Hello Develop02 World!");
+
     }
+    public void DisplayEntries()
+    {
+
+    }
+    public void LoadFile()
+    {
+
+    }
+    public void SaveFile()
+    {
+
+    }
+
 }
 
