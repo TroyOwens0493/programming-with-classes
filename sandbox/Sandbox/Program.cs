@@ -1,21 +1,21 @@
-using System;
+class Costume {
+    //Attributes(member vars)
+   public string _headWear;
+   public string _gloves;
+   public string _shoes;
+   public string _upperGrament;
+   public string _lowerGarment;
+   public string _accessory;
 
-class Program {
-    static void Main(string[] args) {
-        Console.WriteLine("Hello Sandbox World!");
-
-        List<double> x = new();
-        // Gather data to fill a list
-        double input = -1;
-        while(input != 0) {
-            Console.Write("Enter Something ");
-            string inpurt_str = Console.ReadLine();
-            input = double.Parse(inpurt_str);
-            x.Add(input);
-        }
-
-        foreach (double number in x) {
-            Console.WriteLine(number);
-        }
+    //Behaviors
+    public void ShowWardrobe() {
+         string result = "";
+         result += $"Head: {_headWear}\n";
+         result += $"Hands: {_gloves}\n";
+         result += $"Feet: {_shoes}\n";
+         result += $"Torso: {_upperGrament}\n";
+         result += $"Legs: {_lowerGarment}\n";
+         result += $"Other: {_accessory}\n";
+         Console.WriteLine(result);
     }
 }
