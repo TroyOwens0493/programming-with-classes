@@ -9,7 +9,10 @@ public class Journal
     }
     public void DisplayEntries()
     {
-
+        foreach (Entry entry in _entries)
+        {
+            Entry.Display();
+        }
     }
     public void LoadFile()
     {
