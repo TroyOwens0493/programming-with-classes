@@ -1,9 +1,33 @@
-using System;
-
-class Program
+public class Entry
 {
-    static void Main(string[] args)
+    // attributes
+    public DateTime _timestamp;
+
+    public string _prompt;
+
+    public string _body;
+
+    // behaviors
+    public DateTime GetDateTime()
     {
-        Console.WriteLine("Hello Develop02 World!");
+        _timestamp = DateTime.Now;
+        return _timestamp;
+    }
+
+    public string GetPrompt()
+    {
+        _prompt = Prompt.SelectRand();
+        return _prompt;
+    }
+
+    public string GetResponse()
+    {
+        _body = Console.ReadLine();
+        return _body;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Date - {_timestamp} - Prompt: {_prompt}\n {_body}");
     }
 }
