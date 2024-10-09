@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 // Work done by Calvin and Bryson
 class GetPrompt
 {
-    public string Main(string[] args)
+    public string NewPrompt()
     {
         List<string> items = new List<string>
         {"Who was the most interesting person I interacted with today?",

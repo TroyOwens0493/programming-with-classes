@@ -17,7 +17,7 @@ public class Entry
 
     public string GetPrompt()
     {
-        _prompt = GetPrompt();
+        _prompt = ();
         return _prompt;
     }
 
