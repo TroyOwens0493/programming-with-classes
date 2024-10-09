@@ -2,10 +2,7 @@
 
 class Program
 {
-    // Attributes
-    string _userSelection;
-
-    // Behaviors
+        // Behaviors
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to your journal program!");
