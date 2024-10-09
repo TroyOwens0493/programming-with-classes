@@ -32,10 +32,10 @@ public class Journal
 
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
+            outputFile.WriteLine("Datetime,Prompt,Response");
             foreach (Entry entry in _entries)
             {
-                
-                    outputFile.WriteLine($"Date - {entry._timestamp} - Prompt: {entry._prompt}\n {entry._body}");
+                outputFile.WriteLine($"{entry._timestamp}|{entry._prompt}|{entry._body}");
             }
         }
     }
