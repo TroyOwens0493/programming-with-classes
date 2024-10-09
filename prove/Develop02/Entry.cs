@@ -2,7 +2,7 @@
 public class Entry
 {
     // attributes
-    public DateTime _timestamp;
+    public string _timestamp;
 
     public string _prompt;
 
