@@ -9,7 +9,7 @@ public class Entry
     public string _body;
 
     // behaviors
-    public DateTime GetDateTime()
+    public string GetDateTime()
     {
         _timestamp = DateTime.Now;
         _timestamp.ToString("MM/dd/yyyy");
@@ -32,5 +32,10 @@ public class Entry
     public void Display()
     {
         Console.WriteLine($"Date - {_timestamp} - Prompt: {_prompt}\n {_body}");
+    }
+
+    public void DisplayPrompt()
+    {
+        Console.WriteLine($"{_prompt}: ");
     }
 }
