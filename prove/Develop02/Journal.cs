@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 public class Journal
 {
@@ -26,8 +27,17 @@ public class Journal
     }
     public void SaveFile()
     {
+        Console.Write("What do you want to name the file? ");
+        string filename = Console.ReadLine();
 
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach (Entry entry in _entries)
+            {
+                
+                    outputFile.WriteLine($"Date - {entry._timestamp} - Prompt: {entry._prompt}\n {entry._body}");
+            }
+        }
     }
-
 }
 
