@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Serialization;
 
-class Program
+class Prompt
 {
     static string Main(string[] args)
     {
