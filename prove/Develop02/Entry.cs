@@ -1,3 +1,4 @@
+// Work done by calvin and Bryson
 public class Entry
 {
     // attributes
@@ -11,12 +12,14 @@ public class Entry
     public DateTime GetDateTime()
     {
         _timestamp = DateTime.Now;
+        _timestamp.ToString("MM/dd/yyyy");
         return _timestamp;
     }
 
     public string GetPrompt()
-    {
-        _prompt = Prompt.Main();
+    { 
+        Prompts Prompts = new();
+        _prompt = Prompts.NewPrompt();
         return _prompt;
     }
 
