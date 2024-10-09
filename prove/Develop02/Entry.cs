@@ -1,3 +1,4 @@
+// Work done by calvin and Bryson
 public class Entry
 {
     // attributes
@@ -16,7 +17,7 @@ public class Entry
 
     public string GetPrompt()
     {
-        _prompt = GetPrompt();
+        _prompt = ();
         return _prompt;
     }
 
