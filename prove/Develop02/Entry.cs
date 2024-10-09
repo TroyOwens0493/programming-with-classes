@@ -1,3 +1,4 @@
+// Work done by calvin and Bryson
 public class Entry
 {
     // attributes
