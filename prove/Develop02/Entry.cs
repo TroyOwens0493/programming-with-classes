@@ -16,7 +16,7 @@ public class Entry
 
     public string GetPrompt()
     {
-        _prompt = Prompt.;
+        _prompt = Prompt.Main();
         return _prompt;
     }
 
