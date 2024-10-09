@@ -11,9 +11,8 @@ public class Entry
     // behaviors
     public string GetDateTime()
     {
-        _timestamp = DateTime.Now;
-        _timestamp.ToString("MM/dd/yyyy");
-        return _timestamp;
+        DateTime date = DateTime.Now;
+        return date.ToString("MM/dd/yyyy");
     }
 
     public string GetPrompt()
