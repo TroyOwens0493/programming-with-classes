@@ -3,7 +3,7 @@
 class Program
 {
     // Attributes
-    string userSelection;
+    string _userSelection;
 
     // Behaviors
     static void Main(string[] args)
