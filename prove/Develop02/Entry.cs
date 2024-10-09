@@ -16,8 +16,9 @@ public class Entry
     }
 
     public string GetPrompt()
-    {
-        _prompt = ();
+    { 
+        Prompts Prompts = new();
+        _prompt = Prompts.NewPrompt();
         return _prompt;
     }
 
