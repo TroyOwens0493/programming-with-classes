@@ -12,8 +12,10 @@ public class Entry
     public string GetDateTime()
     {
         DateTime date = DateTime.Now;
-        return date.ToString("MM/dd/yyyy");
+        _timestamp = date.ToString("MM/dd/yyyy");
+        return _timestamp;
     }
+    
 
     public string GetPrompt()
     { 
