@@ -17,7 +17,7 @@ public class Journal
     {
         foreach (Entry entry in _entries)
         {
-            Entry.Display();
+            entry.Display();
         }
     }
     public void LoadFile()
