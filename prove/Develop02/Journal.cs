@@ -10,6 +10,7 @@ public class Journal
         
         newEntry._timestamp = newEntry.GetDateTime();
         newEntry._prompt = newEntry.GetPrompt();
+        newEntry.DisplayPrompt();
         newEntry._body = newEntry.GetResponse();
 
         _entries.Add(newEntry);
