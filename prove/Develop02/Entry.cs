@@ -12,7 +12,7 @@ public class Entry
     public string GetDateTime()
     {
         DateTime date = DateTime.Now;
-        _timestamp = date.ToString("MM/dd/yyyy");
+        _timestamp = date.ToString("MM/dd/yyyy hh:mm tt");
         return _timestamp;
     }
     
