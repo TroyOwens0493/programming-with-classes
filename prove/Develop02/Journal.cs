@@ -31,9 +31,9 @@ public class Journal
         string filename = Console.ReadLine();
 
         string[] lines = System.IO.File.ReadAllLines(filename);
-        foreach (string line in lines)
+        for (int i = 1; i < lines.Length; i++)
         {
-            string[] parts = line.Split("|");
+            string[] parts = lines[i].Split("|");
             Entry newEntry = new Entry();
         
             newEntry._timestamp = parts[0];

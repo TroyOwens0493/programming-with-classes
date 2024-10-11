@@ -1,0 +1,3 @@
+Datetime,Prompt,Response
+10/11/2024|Who was the most interesting person I interacted with today?|hi
+10/11/2024|How did I see the hand of the Lord in my life today?|hi2
