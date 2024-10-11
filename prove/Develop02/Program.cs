@@ -19,7 +19,6 @@ class Program
             Console.WriteLine("5.Quit");
             string userSelection = Console.ReadLine();
             // Make a Journal obj
-            Journal Journal = new();
             if (userSelection == "1")
             {
                 Journal.AddEntry();
