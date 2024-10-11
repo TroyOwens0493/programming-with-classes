@@ -17,14 +17,17 @@ public class Journal
     }
     public void DisplayEntries()
     {
-        foreach (Entry entry in _entries)
-        {
-            entry.Display();
-        }
+        if (_entries.Count != 0)
+            foreach (Entry entry in _entries)
+            {
+                entry.Display();
+            }
+        else
+            Console.WriteLine("There are no journal entries to display.");
     }
     public void LoadFile()
     {
-        Console.Write("What is the filename?");
+        Console.Write("What is the filename? ");
         string filename = Console.ReadLine();
 
         string[] lines = System.IO.File.ReadAllLines(filename);
