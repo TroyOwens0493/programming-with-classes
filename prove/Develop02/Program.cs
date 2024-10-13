@@ -8,6 +8,7 @@ class Program
     {
         bool exit = false;
         Journal Journal = new();
+        Prompts Prompts = new();
         Console.WriteLine("Welcome to your journal program!");
         do
         {
@@ -16,7 +17,8 @@ class Program
             Console.WriteLine("2.Display");
             Console.WriteLine("3.Load");
             Console.WriteLine("4.Save");
-            Console.WriteLine("5.Quit");
+            Console.WriteLine("5.Add a new Prompt");
+            Console.WriteLine("6.Quit");
             string userSelection = Console.ReadLine();
             // Make a Journal obj
             if (userSelection == "1")
@@ -34,6 +36,10 @@ class Program
             else if (userSelection == "4")
             {
                 Journal.SaveFile();
+            }
+            else if (userSelection == "5")
+            {
+                Prompts.addPrompt();
             }
             else
             {

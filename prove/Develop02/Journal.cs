@@ -7,7 +7,7 @@ public class Journal
     public void AddEntry()
     {
         Entry newEntry = new Entry();
-        
+
         newEntry._timestamp = newEntry.GetDateTime();
         newEntry._prompt = newEntry.GetPrompt();
         newEntry.DisplayPrompt();
@@ -35,12 +35,13 @@ public class Journal
         {
             string[] parts = lines[i].Split("|");
             Entry newEntry = new Entry();
-        
+
             newEntry._timestamp = parts[0];
             newEntry._prompt = parts[1];
             newEntry._body = parts[2];
 
             _entries.Add(newEntry);
+
         }
     }
     public void SaveFile()
