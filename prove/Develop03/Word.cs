@@ -1,3 +1,4 @@
+/* Written by Daniel Loveless */
 using System.Text;
 
 public class Word
@@ -5,13 +6,6 @@ public class Word
     private string _text;
     private int _length;
     private bool _isHidden;
-
-    public Word()
-    {
-        _text = "";
-        _length = 0;
-        _isHidden = false;
-    }
 
     public Word(string text)
     {
@@ -54,5 +48,4 @@ public class Word
             Console.Write(_text);
         }
     }
-
 }
