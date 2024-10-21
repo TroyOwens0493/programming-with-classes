@@ -1,3 +1,5 @@
+/* Wriiten by Daniel and Emma Loveless */
+
 using System;
 using System.IO;
 
