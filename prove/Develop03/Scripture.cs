@@ -8,9 +8,9 @@ class Scripture
     //Methods
     public void Display()
     {
-        foreach(word in _words)
+        foreach (Word word in _words)
         {
-            word.Display()
+            word.Display();
         }
     }
 
