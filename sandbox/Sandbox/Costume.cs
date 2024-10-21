@@ -1,13 +1,13 @@
 class Program {
     static void Main(string[] args) {
-        Costume nurse = new();
+        Cashregister nurse = new();
         nurse._headWear = "faced  mask";
         nurse._gloves = "nitrile";
         nurse._shoes = "orthopedic sneakers";
         nurse._upperGrament = "scrubs";
         nurse._lowerGarment = "scrubs";
 
-       Costume detective = new();
+       Cashregister detective = new();
        detective._headWear = "fedora";
        detective._gloves = "leather";
        detective._shoes = "loafers";
