@@ -2,11 +2,6 @@ using System;
 
 class Program
 {
-    static void PromptUser()
-    {
-
-    }
-
     static void Main(string[] args)
     {
 
@@ -21,7 +16,7 @@ class Program
         string userInput = Console.ReadLine();
         if (userInput == "")
         {
-            myScripture.HideWords();
+            myScripture.HideWords(3);
             myScripture.Display();
         }
 
