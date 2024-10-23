@@ -6,8 +6,10 @@ class Program
     {
 
         Scripture myScripture = new();
+        Reference myReference = new();
         bool exit = false;
 
+        myReference.Display();
         myScripture.Display();
 
         do
