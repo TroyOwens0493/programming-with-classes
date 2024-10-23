@@ -12,21 +12,21 @@ class ReadWrite
             string cleanLine;
             while ((line = sr.ReadLine()) != null)
             {
-                line = sr.ReadLine();
+                //line = sr.ReadLine();
                 cleanLine = line.Trim();
-                if (line.StartsWith("REFERENCE: "))
+                if (cleanLine.StartsWith("REFERENCE: "))
                 {
                     isScriptureLine = false;
                 }
 
-                if (line == $"REFERENCE: {reference}")
+                if (cleanLine == $"REFERENCE: {reference}")
                 {
                     isScriptureLine = true;
                 }
 
                 if (isScriptureLine)
                 {
-                    scripture += cleanLine.Replace("SCRIPTURE: ", "").Trim();
+                    scripture += cleanLine.Replace("VERSE: ", "\n");
                 }
             }
         }

@@ -7,6 +7,8 @@ class Program
 
         Scripture myScripture = new();
         Reference myReference = new();
+        ReadWrite readwrite = new();
+        Console.WriteLine(readwrite.GetScripture("scripture.txt", "Helaman 5"));
         bool exit = false;
 
         myReference.Display();
