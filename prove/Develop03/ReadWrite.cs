@@ -4,12 +4,12 @@ class ReadWrite
 {
     public string GetScripture(string filename, string reference)
     {
-        string line;
-        string cleanLine;
         string scripture = "";
         bool isScriptureLine = false;
         using (StreamReader sr = new StreamReader(filename))
         {
+            string line;
+            string cleanLine;
             while ((line = sr.ReadLine()) != null)
             {
                 line = sr.ReadLine();
