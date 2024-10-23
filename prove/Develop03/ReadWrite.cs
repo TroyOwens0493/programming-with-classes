@@ -15,10 +15,10 @@ class ReadWrite
 
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-            outputFile.WriteLine($"REFERENCE: {reference}\n\n");
+            outputFile.WriteLine($"REFERENCE: {reference}\n\nVERSE: ");
             foreach (Word word in verse)
             {
-                outputFile.WriteLine($"VERSE: {word}\n\n");
+                outputFile.WriteLine($"{word} ");
             }
         }
     }
