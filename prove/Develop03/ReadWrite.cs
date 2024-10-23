@@ -11,7 +11,7 @@ class ReadWrite
         StreamReader sr = new StreamReader(filename);
         line = sr.ReadLine();
         cleanLine = line.Trim();
-        if (line.StartsWith("REFERECE: "))
+        if (line.StartsWith("REFERENCE: "))
         {
             isScriptureLine = false;
         }
