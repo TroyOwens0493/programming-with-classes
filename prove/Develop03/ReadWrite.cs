@@ -1,3 +1,5 @@
+using System.Data;
+
 class ReadWrite
 {
     public string GetScripture(string filename, string reference)
@@ -27,10 +29,16 @@ class ReadWrite
         return scripture;
 
     }
-
-    public void WriteScripture(string reference, string verse, string filename)
+    public void WriteScripture(string reference, List<Word> verse, string filename)
     {
 
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            outputFile.WriteLine($"REFERENCE: {reference}\n\nVERSE: ");
+            foreach (Word word in verse)
+            {
+                outputFile.WriteLine($"{word} ");
+            }
+        }
     }
-
 }
