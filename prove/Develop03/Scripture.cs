@@ -28,6 +28,7 @@ class Scripture
         foreach (Word word in _words)
         {
             word.Display();
+            Console.Write(' ');
         }
     }
 

@@ -45,7 +45,7 @@ public class Word
         }
         else
         {
-            Console.Write(_text);
+            Console.Write($" {_text}");
         }
     }
 }
