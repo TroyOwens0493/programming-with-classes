@@ -5,21 +5,29 @@ class Program
     static void Main(string[] args)
     {
 
-        Scripture myScripture = new();
-        Reference myReference = new();
         ReadWrite readwrite = new();
         Console.WriteLine(readwrite.GetScripture("scripture.txt", "Helaman 5"));
         bool exit = false;
 
+        // Get the scripture from a file
+        Console.WriteLine("Please type the file name");
+        string fileName = Console.ReadLine();
+        Console.WriteLine("Please type the verse reference");
+        string reference = Console.ReadLine();
+        readwrite.GetScripture(fileName, reference);
+        Reference myReference = new Reference(refernce);
+        Scripture myScripture = new Scripture(scripture);
+
+        //Main menu
         myReference.Display();
         myScripture.Display();
         do
         {
-            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Load a file of scriptures");
+            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Exit");
             string action = Console.ReadLine();
             if (action == "1")
             {
-                do
+                do//Repeat this until the user chooses to exit
                 {
                     Console.WriteLine("Press enter to continue or type 'quit' to finish:");
                     string userInput = Console.ReadLine();
@@ -42,8 +50,12 @@ class Program
                 Console.WriteLine("Please paste in the scripture verses:");
                 string verses = Console.ReadLine();
                 Console.WriteLine("Please type the name of the file you would like to add this too:");
-                string fileName = Console.ReadLine();
+                string newFileName = Console.ReadLine();
                 readwrite.WriteScripture(refernce, verses, fileName);
+            }
+            else if (action == "3")
+            {
+                exit = true;
             }
         } while (!exit);
     }
