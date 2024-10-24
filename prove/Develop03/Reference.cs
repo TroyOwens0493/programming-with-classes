@@ -1,3 +1,4 @@
+//written by Bryson Price
 class Reference
 {
     //attributes
