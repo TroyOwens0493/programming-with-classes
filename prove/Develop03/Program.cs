@@ -13,22 +13,38 @@ class Program
 
         myReference.Display();
         myScripture.Display();
-
         do
         {
-        Console.WriteLine("Press enter to continue or type 'quit' to finish:");
-        string userInput = Console.ReadLine();
-        if (userInput == "")
-        {
-            myScripture.HideWords(3);
-            myScripture.Display();
-        }
+            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Load a file of scriptures");
+            string action = Console.ReadLine();
+            if (action == "1")
+            {
+                do
+                {
+                    Console.WriteLine("Press enter to continue or type 'quit' to finish:");
+                    string userInput = Console.ReadLine();
+                    if (userInput == "")
+                    {
+                        myScripture.HideWords(3);
+                        myScripture.Display();
+                    }
 
-        else if (userInput == "quit")
-        {
-            exit = true;
-        }
+                    else if (userInput == "quit")
+                    {
+                        exit = true;
+                    }
+                } while (!exit);
+            }
+            else if (action == "2")
+            {
+                Console.WriteLine("Please type in the scripture refernce:");
+                string refernce = Console.ReadLine();
+                Console.WriteLine("Please paste in the scripture verses:");
+                string verses = Console.ReadLine();
+                Console.WriteLine("Please type the name of the file you would like to add this too:");
+                string fileName = Console.ReadLine();
+                readwrite.WriteScripture(refernce, verses, fileName);
+            }
         } while (!exit);
-
     }
 }
