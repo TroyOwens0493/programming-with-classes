@@ -15,7 +15,7 @@ class Program
         string reference = Console.ReadLine();
         string scripture = readwrite.GetScripture(fileName, reference);
         Reference myReference = new Reference(reference);
-        Scripture myScripture = new Scripture(scripture);
+        Scripture myScripture = new Scripture(myReference, scripture);
 
         //Main menu
         myReference.Display();
