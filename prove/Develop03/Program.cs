@@ -19,9 +19,10 @@ class Program
             string action = Console.ReadLine();
             if (action == "1")
             {
+                myScripture.Display();
                 do//Repeat this until the user chooses to exit
                 {
-                    
+
                     Console.WriteLine("\n\nPress enter to continue or type 'quit' to finish:");
                     string userInput = Console.ReadLine();
                     if (userInput == "")
