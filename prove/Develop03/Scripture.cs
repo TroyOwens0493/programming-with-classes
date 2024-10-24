@@ -9,12 +9,7 @@ class Scripture
     public Scripture(Reference reference, string text)
     {
         _reference = reference;
-        ParseText(text);
-    }
-
-    // Methods
-    private void ParseText(string text)
-    {
+        
         List<string> textWords = new(text.Split(' '));
         foreach (string word in textWords)
         {
@@ -23,6 +18,7 @@ class Scripture
         }
     }
 
+    // Methods
     public void Display()
     {
         foreach (Word word in _words)
