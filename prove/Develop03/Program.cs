@@ -14,7 +14,7 @@ class Program
         string fileName = Console.ReadLine();
         Console.WriteLine("Please type the verse reference");
         string reference = Console.ReadLine();
-        readwrite.GetScripture(fileName, reference);
+        string scripture = readwrite.GetScripture(fileName, reference);
         Reference myReference = new Reference(reference);
         Scripture myScripture = new Scripture(scripture);
 
@@ -51,7 +51,7 @@ class Program
                 string verses = Console.ReadLine();
                 Console.WriteLine("Please type the name of the file you would like to add this too:");
                 string newFileName = Console.ReadLine();
-                readwrite.WriteScripture(refernce, verses, fileName);
+                readwrite.WriteScripture(refernce, verses, newFileName);
             }
             else if (action == "3")
             {
