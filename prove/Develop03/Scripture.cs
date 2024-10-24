@@ -9,7 +9,7 @@ class Scripture
     public Scripture(string reference, string text)
     {
         _reference = reference;
-        
+
         List<string> textWords = new(text.Split(' '));
         foreach (string word in textWords)
         {
@@ -35,9 +35,9 @@ class Scripture
         int wordsLeft = 0;
         foreach (Word word in _words)
         {
-            if (word.GetIsHidden())
+            if (!word.GetIsHidden())
             {
-                wordsLeft ++;
+                wordsLeft++;
             }
         }
 
@@ -56,9 +56,17 @@ class Scripture
                 wordsLeft -= 1;
             }
 
-        } while ((i < numberOfWordsToHide) || (wordsLeft == 0));
-        if (wordsLeft == 0)
+        } while ((i < numberOfWordsToHide) && (!(wordsLeft == 0)));
+
+        if (wordsLeft <= 0)
+        {
+            Console.WriteLine("Return true");
             return true;
-        else return false;
+        }
+        else
+        {
+            Console.WriteLine("Return false");
+            return false;
+        }
     }
 }
