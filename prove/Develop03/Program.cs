@@ -15,7 +15,7 @@ class Program
         Console.Clear();
         do
         {
-            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Choose a different verse\n 3. Add a new verse\n 4. Exit");
+            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Choose a different verse\n 4. Exit");
             string action = Console.ReadLine();
             if (action == "1")
             {
@@ -57,7 +57,7 @@ class Program
                 string fileName = Console.ReadLine();
                 Console.WriteLine("Please type the verse reference");
                 string newReference = Console.ReadLine();
-                string scripture = readwrite.GetScripture(fileName, reference);
+                string scripture = readwrite.GetScripture(fileName, newReference);
                 myScripture = new Scripture(newReference, scripture);
             }
             else if (action == "4")
