@@ -1,11 +1,28 @@
-//Written by Troy
+// Written by Troy and Daniel Loveless
 class Scripture
 {
-    //Attributes
-    Reference _reference = new Reference();
+    // Attributes
+    Reference _reference;
     List<Word> _words = new();
 
-    //Methods
+
+    public Scripture(Reference reference, string text)
+    {
+        _reference = reference;
+        ParseText(text);
+    }
+
+    // Methods
+    private void ParseText(string text)
+    {
+        List<string> textWords = new(text.Split(' '));
+        foreach (string word in textWords)
+        {
+            Word newWord = new(word);
+            _words.Add(newWord);
+        }
+    }
+
     public void Display()
     {
         foreach (Word word in _words)
