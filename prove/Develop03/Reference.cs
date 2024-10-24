@@ -1,34 +1,47 @@
-//written by Bryson Price
+//written by Bryson Price and Daniel Loveless
 class Reference
 {
     //attributes
     private string _book;
-
     private int _chapter;
-
     private int _startVerse;
-
     private int _endVerse;
 
-    //methods
-    public void setBook(string book)
+    public Reference(string book, int chapter, int verse)
     {
         _book = book;
-    }
-
-    public void setChapter(int chapter)
-    {
         _chapter = chapter;
+        _startVerse = verse;
+        _endVerse = 0;
     }
 
-    public void setStartVerse(int startVerse)
+    public Reference(string book, int chapter, int startVerse, int endVerse)
     {
+        _book = book;
+        _chapter = chapter;
         _startVerse = startVerse;
+        _endVerse = endVerse;
     }
 
-    public void setEndVerse(int endVerse)
+    public Reference(string reference)
     {
-        _endVerse = endVerse;
+        int bookIndex = reference.IndexOf(' ');
+        int chapterIndex = reference.IndexOf(':');
+        int verseIndex;
+        
+        if (reference.Contains('-'))
+        {
+            verseIndex = reference.IndexOf('-');
+            _endVerse = int.Parse(reference.Substring(verseIndex + 1));
+        }
+        else
+        {
+            verseIndex = reference.Length;
+        }
+
+        _book = reference.Substring(0, bookIndex);
+        _chapter = int.Parse(reference.Substring(bookIndex + 1, chapterIndex - bookIndex - 1));
+        _startVerse = int.Parse(reference.Substring(chapterIndex + 1, verseIndex - chapterIndex - 1));
     }
 
     public void Display()
