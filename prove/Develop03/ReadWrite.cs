@@ -35,11 +35,13 @@ class ReadWrite
     }
     public void WriteScripture(string reference, string verse, string filename)
     {
+        // ensures user enters a valid filename
         if (string.IsNullOrEmpty(filename))
         {
             throw new ArgumentException("Filename cannot be null or empty.", nameof(filename));
         }
 
+        //appends verse and reference onto existing file
         using (StreamWriter outputFile = new StreamWriter(filename, true))
         {
             outputFile.WriteLine($"\nREFERENCE: {reference}\n\nVERSE: {verse}");
