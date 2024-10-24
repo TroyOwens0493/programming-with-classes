@@ -32,6 +32,15 @@ class Scripture
     {
         int i = 0;
         Random rnd = new Random();
+        int wordsLeft = 0;
+        foreach (Word word in _words)
+        {
+            if (word.GetIsHidden())
+            {
+                wordsLeft ++;
+            }
+        }
+
         do
         {
             Word wordToHide = _words[rnd.Next(_words.Count())];
@@ -44,9 +53,10 @@ class Scripture
             {
                 wordToHide.Hide();
                 i++;//Increment so we stop when the correct num of words are hidden.
+                wordsLeft -= 1;
             }
 
-        } while (i < numberOfWordsToHide);
+        } while ((i < numberOfWordsToHide) || (wordsLeft == 0));
 
     }
 }
