@@ -2,11 +2,11 @@
 class Scripture
 {
     // Attributes
-    Reference _reference;
+    string _reference;
     List<Word> _words = new();
 
 
-    public Scripture(Reference reference, string text)
+    public Scripture(string reference, string text)
     {
         _reference = reference;
         
