@@ -15,7 +15,7 @@ class Program
         Console.WriteLine("Please type the verse reference");
         string reference = Console.ReadLine();
         readwrite.GetScripture(fileName, reference);
-        Reference myReference = new Reference(refernce);
+        Reference myReference = new Reference(reference);
         Scripture myScripture = new Scripture(scripture);
 
         //Main menu
