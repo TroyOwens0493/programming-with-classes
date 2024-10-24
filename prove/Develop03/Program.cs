@@ -15,7 +15,7 @@ class Program
         myScripture.Display();
         do
         {
-            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Load a file of scriptures");
+            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Load a scripture from a file\n 4. Exit");
             string action = Console.ReadLine();
             if (action == "1")
             {
@@ -44,6 +44,17 @@ class Program
                 Console.WriteLine("Please type the name of the file you would like to add this too:");
                 string fileName = Console.ReadLine();
                 readwrite.WriteScripture(refernce, verses, fileName);
+            }
+            else if (action == "3")
+            {
+                Console.WriteLine("Please type the file name");
+                string fileName = Console.ReadLine();
+                Console.WriteLine("Please type the verse reference");
+                string reference = Console.ReadLine();
+            }
+            else if (action == "4")
+            {
+                exit = true;
             }
         } while (!exit);
     }
