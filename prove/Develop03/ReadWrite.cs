@@ -12,7 +12,6 @@ class ReadWrite
             string cleanLine;
             while ((line = sr.ReadLine()) != null)
             {
-                //line = sr.ReadLine();
                 cleanLine = line.Trim();
                 if (cleanLine.StartsWith("REFERENCE: "))
                 {
@@ -34,16 +33,12 @@ class ReadWrite
         return scripture.Trim();
 
     }
-    public void WriteScripture(string reference, List<Word> verse, string filename)
+    public void WriteScripture(string reference, string verse, string filename)
     {
 
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-            outputFile.WriteLine($"REFERENCE: {reference}\n\nVERSE: ");
-            foreach (Word word in verse)
-            {
-                outputFile.WriteLine($"{word} ");
-            }
+            outputFile.WriteLine($"REFERENCE: {reference}\n\nVERSE: {verse} ");
         }
     }
 }
