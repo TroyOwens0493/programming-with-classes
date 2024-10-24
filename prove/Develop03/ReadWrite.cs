@@ -30,7 +30,7 @@ class ReadWrite
             }
         }
 
-        return scripture.Trim();
+        return scripture;
 
     }
     public void WriteScripture(string reference, string verse, string filename)
