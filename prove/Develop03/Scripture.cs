@@ -28,7 +28,7 @@ class Scripture
         }
     }
 
-    public void HideWords(int numberOfWordsToHide)
+    public bool HideWords(int numberOfWordsToHide)
     {
         int i = 0;
         Random rnd = new Random();
@@ -57,6 +57,8 @@ class Scripture
             }
 
         } while ((i < numberOfWordsToHide) || (wordsLeft == 0));
-
+        if (wordsLeft == 0)
+            return true;
+        else return false;
     }
 }
