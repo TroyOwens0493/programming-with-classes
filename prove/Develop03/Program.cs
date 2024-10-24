@@ -27,7 +27,10 @@ class Program
                     if (userInput == "")
                     {
                         Console.Clear();
-                        myScripture.HideWords(3);
+                        if (myScripture.HideWords(3))
+                        {
+                            exit = true;
+                        }
                         myScripture.Display();
                     }
 
