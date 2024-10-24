@@ -8,8 +8,8 @@ class Program
         ReadWrite readwrite = new();
         bool exit = false;
 
-        string reference = "Heleman 5:11-12";
-        Scripture myScripture = new Scripture(reference, "VERSE: 11 And he hath power given unto him from the Father to redeem them from their sins because of repentance; therefore he hath sent his angels to declare the tidings of the conditions of repentance, which bringeth unto the power of the Redeemer, unto the salvation of their souls. VERSE: 12 And now, my sons, remember, remember that it is upon the rock of our Redeemer, who is Christ, the Son of God, that ye must build your foundation; that when the devil shall send forth his mighty winds, yea, his shafts in the whirlwind, yea, when all his hail and his mighty storm shall beat upon you, it shall have no power over you to drag you down to the gulf of misery and endless wo, because of the rock upon which ye are built, which is a sure foundation, a foundation whereon if men build they cannot fall.");
+        string reference = "Helaman 5:11-12";
+        Scripture myScripture = new Scripture(reference, "11 And he hath power given unto him from the Father to redeem them from their sins because of repentance; therefore he hath sent his angels to declare the tidings of the conditions of repentance, which bringeth unto the power of the Redeemer, unto the salvation of their souls.\n\n12 And now, my sons, remember, remember that it is upon the rock of our Redeemer, who is Christ, the Son of God, that ye must build your foundation; that when the devil shall send forth his mighty winds, yea, his shafts in the whirlwind, yea, when all his hail and his mighty storm shall beat upon you, it shall have no power over you to drag you down to the gulf of misery and endless wo, because of the rock upon which ye are built, which is a sure foundation, a foundation whereon if men build they cannot fall.");
 
         //Main menu
         myScripture.Display();
@@ -21,10 +21,12 @@ class Program
             {
                 do//Repeat this until the user chooses to exit
                 {
-                    Console.WriteLine("Press enter to continue or type 'quit' to finish:");
+                    
+                    Console.WriteLine("\n\nPress enter to continue or type 'quit' to finish:");
                     string userInput = Console.ReadLine();
                     if (userInput == "")
                     {
+                        Console.Clear();
                         myScripture.HideWords(3);
                         myScripture.Display();
                     }
