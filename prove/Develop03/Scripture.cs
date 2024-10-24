@@ -60,12 +60,10 @@ class Scripture
 
         if (wordsLeft <= 0)
         {
-            Console.WriteLine("Return true");
             return true;
         }
         else
         {
-            Console.WriteLine("Return false");
             return false;
         }
     }
