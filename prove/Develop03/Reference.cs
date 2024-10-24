@@ -37,6 +37,7 @@ class Reference
         else
         {
             verseIndex = reference.Length;
+            _endVerse = 0;
         }
 
         _book = reference.Substring(0, bookIndex);
