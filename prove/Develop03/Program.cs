@@ -8,21 +8,14 @@ class Program
         ReadWrite readwrite = new();
         bool exit = false;
 
-        // Get the scripture from a file
-        Console.WriteLine("Please type the file name");
-        string fileName = Console.ReadLine();
-        Console.WriteLine("Please type the verse reference");
-        string reference = Console.ReadLine();
-        string scripture = readwrite.GetScripture(fileName, reference);
-        Reference myReference = new Reference(reference);
-        Scripture myScripture = new Scripture(myReference, scripture);
+        string reference = "Heleman 5:11-12";
+        Scripture myScripture = new Scripture(reference, "VERSE: 11 And he hath power given unto him from the Father to redeem them from their sins because of repentance; therefore he hath sent his angels to declare the tidings of the conditions of repentance, which bringeth unto the power of the Redeemer, unto the salvation of their souls. VERSE: 12 And now, my sons, remember, remember that it is upon the rock of our Redeemer, who is Christ, the Son of God, that ye must build your foundation; that when the devil shall send forth his mighty winds, yea, his shafts in the whirlwind, yea, when all his hail and his mighty storm shall beat upon you, it shall have no power over you to drag you down to the gulf of misery and endless wo, because of the rock upon which ye are built, which is a sure foundation, a foundation whereon if men build they cannot fall.");
 
         //Main menu
-        myReference.Display();
         myScripture.Display();
         do
         {
-            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Exit");
+            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Add a new verse 4. Exit");
             string action = Console.ReadLine();
             if (action == "1")
             {
@@ -53,6 +46,15 @@ class Program
                 readwrite.WriteScripture(refernce, verses, newFileName);
             }
             else if (action == "3")
+            {
+                Console.WriteLine("Please type the file name");
+                string fileName = Console.ReadLine();
+                Console.WriteLine("Please type the verse reference");
+                string newReference = Console.ReadLine();
+                string scripture = readwrite.GetScripture(fileName, reference);
+                myScripture = new Scripture(newReference, scripture);
+            }
+            else if (action == "4")
             {
                 exit = true;
             }
