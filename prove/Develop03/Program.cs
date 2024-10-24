@@ -15,7 +15,7 @@ class Program
         myScripture.Display();
         do
         {
-            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Add a new verse\n 3. Add a new verse 4. Exit");
+            Console.WriteLine("Welcome to the scrpture memorizer program.\n 1. Memorize a verse\n 2. Choose a different verse\n 3. Add a new verse 4. Exit");
             string action = Console.ReadLine();
             if (action == "1")
             {
