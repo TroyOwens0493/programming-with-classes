@@ -6,7 +6,6 @@ class Program
     {
 
         ReadWrite readwrite = new();
-        Console.WriteLine(readwrite.GetScripture("scripture.txt", "Helaman 5"));
         bool exit = false;
 
         // Get the scripture from a file
