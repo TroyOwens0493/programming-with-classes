@@ -30,6 +30,7 @@ class Program
                         Console.Clear();
                         if (myScripture.HideWords(3) == true)
                         {
+                            myScripture.Display();
                             exit = true;
                             break;
                         }
