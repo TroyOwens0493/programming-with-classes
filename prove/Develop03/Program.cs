@@ -1,5 +1,5 @@
 using System;
-
+// written by Bryson and Troy
 class Program
 {
     static void Main(string[] args)
