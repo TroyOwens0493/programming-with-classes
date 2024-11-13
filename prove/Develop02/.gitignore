@@ -1,3 +1,0 @@
-#Makes sure that we don't commit journal entries to github
-# By Troy
-*.txt
