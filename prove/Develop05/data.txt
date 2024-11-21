@@ -1,0 +1,5 @@
+0
+SimpleGoal;eat;eat good foor today;19;False
+EternalGoal;read;read books daily;10
+ChecklistGoal;walk;go on a walk;12;34;3;0
+SimpleGoal;finish hw;do all my work tonight;40;False
